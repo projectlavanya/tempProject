@@ -1,0 +1,44 @@
+# Created on 2022-04-25T13:18:26.501
+org.testng.TestNGException: 
+Cannot instantiate class com.listners.APPListeners
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:41)
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:59)
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:10)
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:60)
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:28)
+	at org.testng.TestNG.addListeners(TestNG.java:993)
+	at org.testng.TestNG.initializeConfiguration(TestNG.java:950)
+	at org.testng.TestNG.initializeEverything(TestNG.java:1041)
+	at org.testng.TestNG.run(TestNG.java:1052)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:38)
+	... 14 more
+Caused by: java.lang.VerifyError: Expecting a stackmap frame at branch target 35
+Exception Details:
+  Location:
+    com/genericmethods/GenericMethods.closeBrowser()V @9: invokestatic
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0000000: b200 912a 2ab8 0094 4cb8 0083 2bb6 0087
+    0000010: b200 38b9 0057 0100 b200 38b9 005a 0100
+    0000020: a700 0d4d b800 832c b600 8b2c bfb8 0083
+    0000030: b600 8eb1                              
+  Exception Handler Table:
+    bci [9, 35] => handler: 35
+
+	at com.listners.APPListeners.<init>(APPListeners.java:10)
+	... 20 more
+
+
