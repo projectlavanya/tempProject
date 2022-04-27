@@ -15,8 +15,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class
-HTTPMethods extends FileUtils {
+public class HTTPMethods extends FileUtils {
     Logger logger = Logger.getLogger(HTTPMethods.class.getName());
     public static String str = "NULL";
 

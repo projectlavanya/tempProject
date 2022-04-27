@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage_OR {
     @FindBy(xpath="//a[normalize-space(text())='Sign in']")
     public static WebElement Sign_in;
-    @FindBy(name="SubmitCreate")
+    @FindBy(id="SubmitCreate")
     public static WebElement CreateAccount;
     @FindBy(id="create_account_error")
     public static WebElement EmptyAccountError;
@@ -39,6 +39,9 @@ public class HomePage_OR {
     public static WebElement EnterAdditionalinfo;
     @FindBy(id="submitAccount")
     public static WebElement SubmitAccount;
+
+    @FindBy(xpath="//a[normalize-space(text())='Sign out']")
+    public static WebElement LogOut;
     @FindBy(id="email")
     public static WebElement EmailID;
     @FindBy(id="passwd")
